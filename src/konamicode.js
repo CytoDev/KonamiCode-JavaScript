@@ -29,8 +29,6 @@ var konami = {
         // play a sound or do something to alert the user that we accept Konami codes...
     },
     parse: function(keyCode) {
-        window.console.log(keyCode);
-
         switch(keyCode) {
             case 38:
                 if(this.sequence.up < 2) {
