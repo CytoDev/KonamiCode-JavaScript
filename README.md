@@ -2,10 +2,9 @@
 A simple implementation of the Konami code in JavaScript. Easy to copy-pasta to your existing codebase to add a little nostalgia.
 
 ## Usage
-To start using this small snippet you need to call `konami.init()` to attach the listeners. Since this is a web based JavaScript file, and since I have little knowledge of desktop JavaScript API's this file uses the `document.addEventListener` method to attach itself. If that doesn't work for you, you only need to change [line 94](https://github.com/CytoDev/KonamiCode-JavaScript/blob/master/src/konamicode.js#L94) to get it to attach.
-
-## Note
-This is a simple script that needs your input to become awesome. This code only listenes to the input and calls `passed` or `reset` based on the sequence the user inputs.
+Simply add KonamiCode.js to your project - or use a fancy module loader to include it - and initialise the script with an options object. The options object must contain at least an "element" key in order for the event listener to be attached. The callback functions are entirely optional, although the script would be useless without them.  
+  
+Callback functions are limited to `onSuccess`, and `onError`. The names are pretty self-explanatory, and the content of those functions is entirely up to you. I suggest to include both callbacks so that you can also notify the user of incorrect inputs when they have started (and incorrectly finished) the Konami code sequence.
 
 ## License
 This project is licensed under the MIT License. You can find a copy of the license [here](https://github.com/CytoDev/KonamiCode-JavaScript/blob/master/LICENSE).
